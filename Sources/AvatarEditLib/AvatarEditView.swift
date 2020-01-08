@@ -19,6 +19,11 @@ public struct AvatarView : View {
     @State var choosedImg : UIImage? = nil
     @State var showAlert : Bool = false
     @State var showEditor : Bool = false
+    
+    public init(defaultImage : UIImage){
+        self.defaultImage = defaultImage
+    }
+    
     public var body : some View {
         
         NavigationView {
