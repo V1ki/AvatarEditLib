@@ -1,6 +1,0 @@
-version: "Apple Swift version 5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
-options: "1945a90807ffc8751200f112bb625390"
-build_time: [1578500651, 661696000]
-inputs:
-  "/Users/Vk/Documents/proj/AvatarEditLib/Sources/AvatarEditLib/AvatarEditView.swift": !dirty [1577045998, 339965993]
-  "/Users/Vk/Documents/proj/AvatarEditLib/Sources/AvatarEditLib/PhotoPickerView.swift": [1578499885, 126255874]

@@ -1,6 +1,0 @@
-version: "Apple Swift version 5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
-options: "1cb981d18d400b596610000ebb6573e8"
-build_time: [1578500667, 838343000]
-inputs:
-  "/Users/Vk/Documents/proj/AvatarEditLib/Tests/AvatarEditLibTests/AvatarEditLibTests.swift": [1578499902, 435272354]
-  "/Users/Vk/Documents/proj/AvatarEditLib/Tests/AvatarEditLibTests/XCTestManifests.swift": [1578499453, 396537546]
