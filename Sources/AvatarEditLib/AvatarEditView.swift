@@ -1,25 +1,28 @@
 //
 //  AvatarEditView.swift
-//  ClassM
+//  AvatarEditLib
 //
 //  Created by Vk on 2019/12/21.
-//  Copyright © 2019 hileel. All rights reserved.
+//  Copyright © 2019 V1ki. All rights reserved.
 //
 
 import SwiftUI
-
+let screen_w = UIScreen.main.bounds.width
+let screen_h = UIScreen.main.bounds.height
 let widget_w = screen_w - 20 * 2
-struct AvatarView : View {
+
+@available(iOS 13.0, *)
+public struct AvatarView : View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var image : UIImage = UIImage(named:"avatar")!
+    @State var defaultImage : UIImage// = UIImage(named:"avatar")!
     @State var choosedImg : UIImage? = nil
     @State var showAlert : Bool = false
     @State var showEditor : Bool = false
-    var body : some View {
+    public var body : some View {
         
         NavigationView {
-            Image(uiImage: self.choosedImg == nil ? image : self.choosedImg!)
+            Image(uiImage: self.choosedImg == nil ? defaultImage : self.choosedImg!)
                 .resizable()
                 .aspectRatio( self.choosedImg == nil ? 1 : self.choosedImg!.size.width / self.choosedImg!.size.height , contentMode: .fit)
                 .frame(width: screen_w)
@@ -47,9 +50,10 @@ struct AvatarView : View {
     }
 }
 
-
+@available(iOS 13.0, *)
 let topSpacing: CGFloat = UIApplication.shared.windows[0].safeAreaInsets != UIEdgeInsets.zero ? 54 : 40
-struct AvatarEditView: View {
+@available(iOS 13.0, *)
+public struct AvatarEditView: View {
     
     enum DragState {
         case inactive
@@ -109,7 +113,7 @@ struct AvatarEditView: View {
     
     let cropRect : CGRect = CGRect(x: 20, y:  ( screen_h - topSpacing - widget_w) / 2, width: widget_w, height: widget_w)
     
-    var body: some View {
+    public var body: some View {
         
         let magnificationDrag = MagnificationGesture()
             .simultaneously(with: DragGesture())
@@ -416,7 +420,7 @@ struct AvatarEditView: View {
     }
     
 }
-
+@available(iOS 13.0, *)
 struct ImageFrameModifier : ViewModifier {
     
     let size: CGSize
