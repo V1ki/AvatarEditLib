@@ -15,7 +15,7 @@ let widget_w = screen_w - 20 * 2
 public struct AvatarView : View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @State var defaultImage : UIImage// = UIImage(named:"avatar")!
+    let defaultImage : UIImage// = UIImage(named:"avatar")!
     @State var choosedImg : UIImage? = nil
     @State var showAlert : Bool = false
     @State var showEditor : Bool = false
