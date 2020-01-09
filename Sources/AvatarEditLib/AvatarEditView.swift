@@ -16,12 +16,13 @@ public struct AvatarView : View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     let defaultImage : UIImage// = UIImage(named:"avatar")!
-    @State var choosedImg : UIImage? = nil
+    @Binding var choosedImg : UIImage?
     @State var showAlert : Bool = false
     @State var showEditor : Bool = false
     
-    public init(defaultImage : UIImage){
+    public init(defaultImage : UIImage ,choosedImg :Binding<UIImage?> ){
         self.defaultImage = defaultImage
+        self._choosedImg = choosedImg
     }
     
     public var body : some View {
